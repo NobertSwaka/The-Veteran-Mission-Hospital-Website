@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { collection, addDoc } from "firebase/firestore";
-import { db } from "./firebase"; // Import the Firestore instance
+import { ref, push } from "firebase/database";
+import { db } from "./firebase";
 
 const BookingPage = () => {
   const [formData, setFormData] = useState({
@@ -30,9 +30,12 @@ const BookingPage = () => {
     e.preventDefault();
 
     try {
-      // Use the db reference to add document to Firestore
-      const docRef = await addDoc(collection(db, "appointments"), formData);
-      console.log("Document written with ID: ", docRef.id);
+      // Create a reference to the 'bookings' node in your database
+      const bookingsRef = ref(db, "bookings");
+
+      // Use the push function to add a new record with the form data
+      await push(bookingsRef, formData);
+
       setSuccessMessage("Appointment booked successfully!");
       setFormData({
         name: "",
@@ -40,8 +43,8 @@ const BookingPage = () => {
         phone: "",
         clinic: "",
       });
-    } catch (e) {
-      console.error("Error adding document: ", e);
+    } catch (error) {
+      console.error("Error booking appointment: ", error);
     }
   };
 
