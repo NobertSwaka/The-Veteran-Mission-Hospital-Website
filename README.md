@@ -1,4 +1,3 @@
-Here’s a README file in Markdown format that will automatically style itself when viewed in a GitHub code editor or other Markdown-supported viewers:
 
 ```markdown
 # The Veteran Mission Hospitals Website
