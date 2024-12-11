@@ -77,14 +77,14 @@ const Header = () => {
             </button>
 
             {isAboutDropdownOpen && (
-              <div className="absolute left-0 top-full w-48 bg-white text-white rounded-md shadow-lg z-50">
-                <Link to="/AboutPage" className="block px-4 py-2 hover:bg-red-800">
+              <div className="absolute left-0 top-full w-48 bg-white text-black rounded-md shadow-lg z-50 ">
+                <Link to="/AboutPage" className="block px-4 py-2 hover:bg-red-800 hover:text-white">
                   Get to Know Us
                 </Link>
-                <Link to="/OurTeam" className="block px-4 py-2 hover:bg-red-800">
+                <Link to="/OurTeam" className="block px-4 py-2 hover:bg-red-800 hover:text-white">
                   Our Team
                 </Link>
-                <Link to="/Testimonials" className="block px-4 py-2 hover:bg-red-800">
+                <Link to="/Testimonials" className="block px-4 py-2 hover:bg-red-800 hover:text-white">
                   Testimonials
                 </Link>
               </div>
@@ -120,28 +120,28 @@ const Header = () => {
             </button>
 
             {isServicesDropdownOpen && (
-              <div className="absolute left-0 top-full w-56 bg-white text-white rounded-md shadow-lg z-50">
-                <Link to="/EmergencyCare" className="block px-4 py-2 hover:bg-red-800">
+              <div className="absolute left-0 top-full w-56 bg-white text-black rounded-md shadow-lg z-50">
+                <Link to="/EmergencyCare" className="block px-4 py-2 hover:bg-red-800 hover:text-white">
                   Emergency Care
                 </Link>
-                <Link to="/CardiologyClinic" className="block px-4 py-2 hover:bg-red-800">
+                <Link to="/CardiologyClinic" className="block px-4 py-2 hover:bg-red-800 hover:text-white">
                   Cardiology
                 </Link>
-                <Link to="/PaediatricClinic" className="block px-4 py-2 hover:bg-red-800">
+                <Link to="/PaediatricClinic" className="block px-4 py-2 hover:bg-red-800 hover:text-white">
                   Pediatrics
                 </Link>
-                <Link to="/GynaecologyClinic" className="block px-4 py-2 hover:bg-red-800">
+                <Link to="/GynaecologyClinic" className="block px-4 py-2 hover:bg-red-800 hover:text-white">
                   Gynaecology
                 </Link>
-                <Link to="/services/orthopedic" className="block px-4 py-2 hover:bg-red-800">
+                <Link to="/services/orthopedic" className="block px-4 py-2 hover:bg-red-800 hover:text-white">
                   Orthopedic
                 </Link>
-                <Link to="/DentalClinic" className="block px-4 py-2 hover:bg-red-800">
+                <Link to="/DentalClinic" className="block px-4 py-2 hover:bg-red-800 hover:text-white">
                   Dental Clinic
                 </Link>
                 <Link
                   to="/SpecializedClinicsTimetable"
-                  className="block px-4 py-2 hover:bg-red-800"
+                  className="block px-4 py-2 hover:bg-red-800 hover:text-white"
                 >
                   Specialized Clinics Timetable
                 </Link>
@@ -224,7 +224,26 @@ const Header = () => {
         <div className="md:hidden bg-green-600 text-white px-2 py-3">
           <Link
             to="/"
-            className="block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700"
+            className="block px-3 py-2 rounded-md text-base font-medium hover:bg-red-700"
+          >
+            Home
+          </Link>
+          <Link
+            to="/AboutPage"
+
+            className="block px-3 py-2 rounded-md text-base font-medium hover:bg-red-700"
+          >
+            About Us
+          </Link>
+          <Link
+            to="/"
+            className="block px-3 py-2 rounded-md text-base font-medium hover:bg-red-700"
+          >
+            Home
+          </Link>
+          <Link
+            to="/"
+            className="block px-3 py-2 rounded-md text-base font-medium hover:bg-red-700"
           >
             Home
           </Link>
