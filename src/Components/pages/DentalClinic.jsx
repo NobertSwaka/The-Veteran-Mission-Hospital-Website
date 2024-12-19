@@ -1,10 +1,11 @@
 // src/Components/pages/DentalClinic.jsx
 import React from "react";
 import Footer from "./Footer";
+import WhatsappIcon from "./WhatsappIcon";
 
 const DentalClinic = () => {
   return (
-    <div className="flex flex-col items-center bg-gray-50 text-gray-800">
+    <div className="flex flex-col items-center bg-gray-50 text-gray-800 pt-24">
       
       {/* Hero Section */}
       <section
@@ -99,7 +100,7 @@ const DentalClinic = () => {
       </section>
 
       
-      
+      <WhatsappIcon />
       <Footer />
     </div>
   );

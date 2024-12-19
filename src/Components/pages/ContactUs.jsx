@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Footer from "./Footer";
 import { ref, push } from "firebase/database";
 import { db } from "./firebase"; // Ensure this points to your Firebase configuration
+import WhatsappIcon from "./WhatsappIcon";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -35,7 +36,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center bg-gray-100 min-h-screen">
+    <div className="flex flex-col items-center justify-center bg-gray-100 min-h-screen pt-20">
       <div className="flex flex-col lg:flex-row items-center justify-center w-full lg:h-auto">
         {/* Contact Form Section */}
         <div className="bg-white shadow-md rounded-lg p-8 max-w-md w-full m-4">
@@ -133,7 +134,7 @@ const ContactUs = () => {
           ></iframe>
         </div>
       </div>
-
+       <WhatsappIcon />
       {/* Footer Section */}
       <Footer />
     </div>

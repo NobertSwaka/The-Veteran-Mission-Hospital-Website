@@ -28,6 +28,7 @@ const Footer = () => {
               <li className="mb-2"><a href="/AboutPage" className="hover:text-red-800">About Us</a></li>
               <li className="mb-2"><a href="/Doctors" className="hover:text-red-800">Meet Our Doctors</a></li>
               <li className="mb-2"><a href="/ContactUs" className="hover:text-red-800">Contact Us</a></li>
+              <li className="mb-2"><a href="/InsurancePage" className="hover:text-red-800">Insurance</a></li>
             </ul>
           </div>
 
@@ -55,8 +56,8 @@ const Footer = () => {
         <div className="border-t border-gray-700 pt-4 text-sm text-center">
           <p>© 2024 TVMH. All Rights Reserved. <br />Developed By: Koinonia Creatives +254 7146 70257</p>
           <div className="flex justify-center space-x-4 mt-2">
-            <a href="/privacy-policy" className="hover:text-gray-400">Privacy Policy</a>
-            <a href="/terms" className="hover:text-gray-400">Terms of Service</a>
+            <a href="/PrivacyPolicy" className="hover:text-gray-400">Privacy Policy</a>
+            <a href="/TermsOfService" className="hover:text-gray-400">Terms of Service</a>
           </div>
         </div>
       </div>

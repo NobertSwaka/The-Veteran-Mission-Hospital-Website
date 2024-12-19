@@ -5,7 +5,7 @@ import WhatsappIcon from './WhatsappIcon';
 
 const AboutPage = () => {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100 min-h-screen pt-20">
       <header className="bg-green-600 mt-5 text-white text-center py-3">
         <h1 className="text-4xl font-bold">About Us</h1>
         <p className="mt-4 text-lg">Caring for you and your family with compassion and expertise.</p>

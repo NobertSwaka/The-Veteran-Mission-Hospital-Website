@@ -111,7 +111,7 @@ const HomePage = () => {
               <div className="flex justify-center mt-4">
                 <Link
                   to="/EmergencyCare"
-                  className="inline-block bg-green-600 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded text-center"
+                  className="inline-block bg-green-600 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded text-center"
                 >
                   Read More
                 </Link>
@@ -134,7 +134,7 @@ const HomePage = () => {
               <div className="flex justify-center mt-4">
                 <Link
                   to="/CardiologyClinic"
-                  className="inline-block bg-green-600 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded text-center"
+                  className="inline-block bg-green-600 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded text-center"
                 >
                   Read More
                 </Link>
@@ -158,7 +158,7 @@ const HomePage = () => {
               <div className="flex justify-center mt-4">
                 <Link
                   to="/PaediatricClinic" // Replace with the actual path
-                  className="inline-block bg-green-600 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded text-center"
+                  className="inline-block bg-green-600 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded text-center"
                 >
                   Read More
                 </Link>
@@ -180,7 +180,7 @@ const HomePage = () => {
               <div className="flex justify-center mt-4">
                 <Link
                   to="/gynaecology" // Replace with the actual path
-                  className="inline-block bg-green-600 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded text-center"
+                  className="inline-block bg-green-600 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded text-center"
                 >
                   Read More
                 </Link>
@@ -203,7 +203,7 @@ const HomePage = () => {
               <div className="flex justify-center mt-4">
                 <Link
                   to="/orthopedic" // Replace with the actual path
-                  className="inline-block bg-green-600 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded text-center"
+                  className="inline-block bg-green-600 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded text-center"
                 >
                   Read More
                 </Link>
@@ -225,7 +225,7 @@ const HomePage = () => {
               <div className="flex justify-center mt-4">
                 <Link
                   to="/dental-clinic" // Replace with the actual path
-                  className="inline-block bg-green-600 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded text-center"
+                  className="inline-block bg-green-600 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded text-center"
                 >
                   Read More
                 </Link>

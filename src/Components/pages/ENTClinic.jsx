@@ -1,8 +1,10 @@
 import React from "react";
+import Footer from "./Footer";
+import WhatsappIcon from "./WhatsappIcon";
 
 const ENTClinic = () => {
   return (
-    <div className="flex flex-col items-center bg-gray-50 text-gray-800">
+    <div className="flex flex-col items-center bg-gray-50 text-gray-800 pt-24">
       
       {/* Hero Section */}
       <section
@@ -123,19 +125,10 @@ const ENTClinic = () => {
           </div>
         </div>
       </section>
-
-      {/* Contact Section */}
-      <section className="py-12 px-4 bg-gray-200">
-        <h2 className="text-3xl font-semibold text-center mb-6">Get in Touch</h2>
-        <p className="text-lg text-center max-w-3xl mx-auto">
-          Our dedicated team of ENT specialists is ready to assist you with your ear, nose, and throat concerns. Contact us today to schedule an appointment.
-        </p>
-        <div className="flex flex-col md:flex-row justify-center mt-8 space-y-4 md:space-y-0 md:space-x-6">
-          <button className="px-8 py-3 bg-blue-600 text-white rounded-md shadow-lg hover:bg-blue-700">Call Us</button>
-          <button className="px-8 py-3 bg-green-600 text-white rounded-md shadow-lg hover:bg-green-700">Book Online</button>
-        </div>
-      </section>
+<WhatsappIcon />
+      <Footer />
     </div>
+    
   );
 };
 

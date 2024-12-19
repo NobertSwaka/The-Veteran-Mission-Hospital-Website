@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "./Footer";
+import WhatsappIcon from "./WhatsappIcon";
 
 const FAQ = () => {
   const faqs = [
@@ -34,7 +35,7 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center bg-gray-50 text-gray-800">
+    <div className="flex flex-col items-center bg-gray-50 text-gray-800 pt-24">
       {/* Hero Section */}
       <section className="relative bg-green-400 h-[250px] w-full">
         <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -56,6 +57,7 @@ const FAQ = () => {
           ))}
         </div>
       </section>
+      <WhatsappIcon />
       <Footer />
     </div>
   );

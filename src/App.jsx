@@ -26,6 +26,9 @@ import GynaecologyClinic from './Components/pages/GynaecologyClinic';
 import DentalClinic from './Components/pages/DentalClinic';
 import WhatsappIcon from './Components/pages/WhatsappIcon';
 import SpecializedClinicsTimetable from './Components/pages/SpecializedClinicsTimetable';
+import OrthopedicClinic from './Components/pages/OrthopedicClinic';
+import TermsOfService from './Components/TermsOfService';
+import PrivacyPolicy from './Components/PrivacyPolicy';
 
 const App = () => {
   return (
@@ -57,6 +60,9 @@ const App = () => {
         <Route path='/DentalClinic' element={<DentalClinic />} />
         <Route path='/WhatsappIcon' element={<WhatsappIcon />} />
         <Route path='/SpecializedClinicsTimetable' element={<SpecializedClinicsTimetable />} />
+        <Route path='/OrthopedicClinic' element={<OrthopedicClinic />} />
+        <Route path='/TermsOfService' element={<TermsOfService />} />
+        <Route path='/PrivacyPolicy' element={<PrivacyPolicy />} />
 
       
         {/* Add more routes as needed */}

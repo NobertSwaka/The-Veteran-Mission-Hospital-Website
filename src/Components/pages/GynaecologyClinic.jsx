@@ -4,7 +4,7 @@ import WhatsappIcon from "./WhatsappIcon";
 
 const GynaecologyClinic = () => {
   return (
-    <div className="flex flex-col items-center bg-gray-50 text-gray-800">
+    <div className="flex flex-col items-center bg-gray-50 text-gray-800 pt-24">
       
       {/* Hero Section */}
       <section

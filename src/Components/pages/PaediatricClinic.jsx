@@ -1,9 +1,10 @@
 import React from "react";
 import Footer from "./Footer";
+import WhatsappIcon from "./WhatsappIcon";
 
 const PediatricClinic = () => {
   return (
-    <div className="flex flex-col items-center bg-gray-50 text-gray-800">
+    <div className="flex flex-col items-center bg-gray-50 text-gray-800 pt-24"> {/* Increased pt-24 for more space */}
       
       {/* Hero Section */}
       <section
@@ -126,7 +127,7 @@ const PediatricClinic = () => {
           </div>
         </div>
       </section>
-
+<WhatsappIcon />
       <Footer />
     </div>
   );

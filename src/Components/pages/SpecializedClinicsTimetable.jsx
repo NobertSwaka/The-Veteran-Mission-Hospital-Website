@@ -1,4 +1,6 @@
 import React from "react";
+import Footer from "./Footer"; // Import Footer component
+import WhatsappIcon from "./WhatsappIcon";
 
 const SpecializedClinicTimetable = () => {
   const timetable = [
@@ -108,7 +110,10 @@ const SpecializedClinicTimetable = () => {
           </tbody>
         </table>
       </div>
+<WhatsappIcon />
+      {/* Footer added here */}
     </div>
+    
   );
 };
 

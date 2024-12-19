@@ -93,6 +93,13 @@ const Header = () => {
                 >
                   Testimonials
                 </Link>
+
+                <Link
+                  to="/InsurancePage"
+                  className="block px-4 py-2 hover:bg-red-800 hover:text-white"
+                >
+                  Insurance
+                </Link>
               </div>
             )}
           </div>
@@ -123,7 +130,7 @@ const Header = () => {
               </svg>
             </button>
             {isServicesDropdownOpen && (
-              <div className="absolute left-0 top-full w-56 bg-white text-black rounded-md shadow-lg z-50">
+              <div className="absolute left-0 top-full bg-white text-black rounded-md shadow-lg z-50 p-4 grid grid-cols-2 gap-4 w-96">
                 <Link
                   to="/EmergencyCare"
                   className="block px-4 py-2 hover:bg-red-800 hover:text-white"
@@ -149,7 +156,7 @@ const Header = () => {
                   Gynaecology
                 </Link>
                 <Link
-                  to="/services/orthopedic"
+                  to="/OrthopedicClinic"
                   className="block px-4 py-2 hover:bg-red-800 hover:text-white"
                 >
                   Orthopedic
@@ -159,6 +166,32 @@ const Header = () => {
                   className="block px-4 py-2 hover:bg-red-800 hover:text-white"
                 >
                   Dental Clinic
+                </Link>
+                <Link
+                  to="/MaxillofacialSurgeon"
+                  className="block px-4 py-2 hover:bg-red-800 hover:text-white"
+                >
+                  Maxillofacial Surgery
+                </Link>
+                <Link
+                  to="/GeneralSurgeryClinic"
+                  className="block px-4 py-2 hover:bg-red-800 hover:text-white"
+                >
+                  General Surgery
+                </Link>
+
+                <Link
+                  to="/DermatologyClinic"
+                  className="block px-4 py-2 hover:bg-red-800 hover:text-white"
+                >
+                  Dermatology
+                </Link>
+
+                <Link
+                  to="/ENTClinic"
+                  className="block px-4 py-2 hover:bg-red-800 hover:text-white"
+                >
+                  ENT Clinic
                 </Link>
                 <Link
                   to="/SpecializedClinicsTimetable"
