@@ -58,12 +58,12 @@ import { initializeApp } from 'firebase/app';
 import { getDatabase } from 'firebase/database';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA6o3xSCDkEQ4EqGX9MGW1edtKCjbmjQUI",
-  authDomain: "veteranhospital-13b3b.firebaseapp.com",
-  projectId: "veteranhospital-13b3b",
-  storageBucket: "veteranhospital-13b3b.firebasestorage.app",
-  messagingSenderId: "457477143916",
-  appId: "1:457477143916:web:3b79f22a3bc470839c4749"
+  apiKey: "AIzaSyC5dZflHmiBVa0OdOkqmdYh7ggqeul22dk",
+  authDomain: "hospital-cca55.firebaseapp.com",
+  projectId: "hospital-cca55",
+  storageBucket: "hospital-cca55.firebasestorage.app",
+  messagingSenderId: "82791187476",
+  appId: "1:82791187476:web:5cbbcc54b559bbbab29301"
 };
 
 // Initialize Firebase

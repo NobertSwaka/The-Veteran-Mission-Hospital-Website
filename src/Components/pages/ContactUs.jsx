@@ -1,19 +1,46 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import emailjs from 'emailjs-com';
 import Footer from './Footer';
 
 const ContactUs = () => {
+  const formRef = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_mo9hrj3', // Replace with your EmailJS service ID
+        'template_acnkitn', // Replace with your EmailJS template ID
+        formRef.current,
+        'Tm7_IiAsDoF3iM0qf' // Replace with your EmailJS public key
+      )
+      .then(
+        (result) => {
+          console.log('Email sent successfully:', result.text);
+          alert('Message sent successfully!');
+          e.target.reset(); // Reset form fields after successful submission
+        },
+        (error) => {
+          console.error('Error sending email:', error.text);
+          alert('Failed to send the message. Please try again later.');
+        }
+      );
+  };
+
   return (
     <div className="flex flex-col items-center justify-center bg-gray-100 min-h-screen">
       <div className="flex flex-col lg:flex-row items-center justify-center w-full lg:h-auto">
         {/* Contact Form Section */}
         <div className="bg-white shadow-md rounded-lg p-8 max-w-md w-full m-4">
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Contact Us</h2>
-          <form>
+          <form ref={formRef} onSubmit={sendEmail}>
             <div className="mb-4">
               <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Name</label>
               <input
                 type="text"
                 id="name"
+                name="user_name"
                 className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-300"
                 required
               />
@@ -23,6 +50,7 @@ const ContactUs = () => {
               <input
                 type="email"
                 id="email"
+                name="user_email"
                 className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-300"
                 required
               />
@@ -32,6 +60,7 @@ const ContactUs = () => {
               <input
                 type="tel"
                 id="phone"
+                name="user_phone"
                 className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-300"
                 required
               />
@@ -40,6 +69,7 @@ const ContactUs = () => {
               <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Message</label>
               <textarea
                 id="message"
+                name="message"
                 rows="4"
                 className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-300"
                 required
