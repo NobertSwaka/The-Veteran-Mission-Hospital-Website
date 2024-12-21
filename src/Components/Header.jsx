@@ -9,6 +9,9 @@ const Header = () => {
   const [headerVisible, setHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
+  const toggleDropdown = (dropdownSetter) => {
+    dropdownSetter((prevState) => !prevState);
+  };
   // Handle header visibility on scroll
   const handleScroll = () => {
     if (window.scrollY > lastScrollY) {
@@ -229,178 +232,170 @@ const Header = () => {
           </Link>
         </nav>
 
-        {/* Mobile Menu Button */}
-<div className="flex items-center md:hidden">
-  <button
-    onClick={() => setIsMenuOpen(!isMenuOpen)}
-    className="p-2 rounded-md text-white hover:bg-blue-700"
-    aria-controls="mobile-menu"
-    aria-expanded={isMenuOpen}
-  >
-    {isMenuOpen ? (
-      <svg
-        className="h-6 w-6"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M6 18L18 6M6 6l12 12"
-        />
-      </svg>
-    ) : (
-      <svg
-        className="h-6 w-6"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M4 8h16M4 16h16"
-        />
-      </svg>
-    )}
-  </button>
-</div>
-
-{/* Mobile Menu */}
-{isMenuOpen && (
-  <div className="md:hidden bg-green-600 text-white px-2 py-3">
-    <Link
-      to="/"
-      className="block px-3 py-2 rounded-md text-base font-medium hover:bg-red-700"
-    >
-      Home
-    </Link>
-
-    {/* About Us Dropdown */}
-    <div className="relative">
-      <button
-        className="block px-3 py-2 rounded-md text-base font-medium hover:bg-red-700 w-full text-left"
-        onClick={() => setIsAboutDropdownOpen(!isAboutDropdownOpen)}
-      >
-        About Us
-        <svg
-          className="ml-1 h-4 w-4 inline"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
-      </button>
-
-      {isAboutDropdownOpen && (
-        <div className="bg-white text-black rounded-md shadow-lg">
-          <Link to="/AboutPage" className="block px-4 py-2 hover:bg-red-800 hover:text-white">
-            Get to Know Us
-          </Link>
-          <Link to="/OurTeam" className="block px-4 py-2 hover:bg-red-800 hover:text-white">
-            Our Team
-          </Link>
-          <Link to="/Testimonials" className="block px-4 py-2 hover:bg-red-800 hover:text-white">
-            Testimonials
-          </Link>
-        </div>
-      )}
-    </div>
-
-    {/* Services Dropdown */}
-    <div className="relative">
-      <button
-        className="block px-3 py-2 rounded-md text-base font-medium hover:bg-red-700 w-full text-left"
-        onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
-      >
-        Services
-        <svg
-          className="ml-1 h-4 w-4 inline"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
-      </button>
-
-      {isServicesDropdownOpen && (
-        <div className="bg-white text-black rounded-md shadow-lg">
-          <Link to="/EmergencyCare" className="block px-4 py-2 hover:bg-red-800 hover:text-white">
-            Emergency Care
-          </Link>
-          <Link to="/CardiologyClinic" className="block px-4 py-2 hover:bg-red-800 hover:text-white">
-            Cardiology
-          </Link>
-          <Link to="/PaediatricClinic" className="block px-4 py-2 hover:bg-red-800 hover:text-white">
-            Pediatrics
-          </Link>
-          <Link to="/GynaecologyClinic" className="block px-4 py-2 hover:bg-red-800 hover:text-white">
-            Gynaecology
-          </Link>
-          <Link to="/services/orthopedic" className="block px-4 py-2 hover:bg-red-800 hover:text-white">
-            Orthopedic
-          </Link>
-          <Link to="/DentalClinic" className="block px-4 py-2 hover:bg-red-800 hover:text-white">
-            Dental Clinic
-          </Link>
-          <Link
-            to="/SpecializedClinicsTimetable"
-            className="block px-4 py-2 hover:bg-red-800 hover:text-white"
+{/* Mobile Menu Button */}
+<div className="md:hidden">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-white focus:outline-none hover:bg-green-700 p-2 rounded-md"
           >
-            Specialized Clinics Timetable
-          </Link>
+            {isMenuOpen ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 8h16M4 16h16"
+                />
+              </svg>
+            )}
+          </button>
         </div>
-      )}
-    </div>
 
-    <Link
-      to="/doctors"
-      className="block px-3 py-2 rounded-md text-base font-medium hover:bg-red-700"
-    >
-      Doctors
-    </Link>
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden absolute top-16 left-0 w-full bg-green-600 shadow-lg">
+            <nav className="px-4 py-4 space-y-2">
+              <Link
+                to="/"
+                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-green-700"
+              >
+                Home
+              </Link>
 
-    <Link
-      to="/gallery"
-      className="block px-3 py-2 rounded-md text-base font-medium hover:bg-red-700"
-    >
-      Gallery
-    </Link>
+              {/* About Us Dropdown */}
+              <div>
+                <button
+                  onClick={() => toggleDropdown(setIsAboutDropdownOpen)}
+                  className="w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium hover:bg-green-700"
+                >
+                  About Us
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                {isAboutDropdownOpen && (
+                  <div className="bg-white text-black rounded-md shadow-md mt-2">
+                    <Link
+                      to="/AboutPage"
+                      className="block px-4 py-2 hover:bg-green-700 hover:text-white"
+                    >
+                      Get to Know Us
+                    </Link>
+                    <Link
+                      to="/OurTeam"
+                      className="block px-4 py-2 hover:bg-green-700 hover:text-white"
+                    >
+                      Our Team
+                    </Link>
+                    <Link
+                      to="/Testimonials"
+                      className="block px-4 py-2 hover:bg-green-700 hover:text-white"
+                    >
+                      Testimonials
+                    </Link>
+                  </div>
+                )}
+              </div>
 
-    <Link
-      to="/ContactUs"
-      className="block px-3 py-2 rounded-md text-base font-medium hover:bg-red-700"
-    >
-      Contact
-    </Link>
+              {/* Services Dropdown */}
+              <div>
+                <button
+                  onClick={() => toggleDropdown(setIsServicesDropdownOpen)}
+                  className="w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium hover:bg-green-700"
+                >
+                  Services
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                {isServicesDropdownOpen && (
+                  <div className="bg-white text-black rounded-md shadow-md mt-2">
+                    <Link
+                      to="/EmergencyCare"
+                      className="block px-4 py-2 hover:bg-green-700 hover:text-white"
+                    >
+                      Emergency Care
+                    </Link>
+                    <Link
+                      to="/CardiologyClinic"
+                      className="block px-4 py-2 hover:bg-green-700 hover:text-white"
+                    >
+                      Cardiology
+                    </Link>
+                    <Link
+                      to="/PaediatricClinic"
+                      className="block px-4 py-2 hover:bg-green-700 hover:text-white"
+                    >
+                      Pediatrics
+                    </Link>
+                    <Link
+                      to="/DentalClinic"
+                      className="block px-4 py-2 hover:bg-green-700 hover:text-white"
+                    >
+                      Dental Clinic
+                    </Link>
+                  </div>
+                )}
+              </div>
 
-    <Link
-      to="/FAQ"
-      className="block px-3 py-2 rounded-md text-base font-medium hover:bg-red-700"
-    >
-      FAQ
-    </Link>
-  </div>
-)}
+              <Link
+                to="/doctors"
+                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-green-700"
+              >
+                Doctors
+              </Link>
+              <Link
+                to="/ContactUs"
+                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-green-700"
+              >
+                Contact
+              </Link>
+            </nav>
+          </div>
+        )}
 
       </div>
     </header>
