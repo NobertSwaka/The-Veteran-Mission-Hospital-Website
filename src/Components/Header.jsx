@@ -12,9 +12,6 @@ const Header = () => {
   const toggleDropdown = (dropdownSetter) => {
     dropdownSetter((prevState) => !prevState);
   };
-  const toggleDropdown = (dropdownSetter) => {
-    dropdownSetter((prevState) => !prevState);
-  };
   // Handle header visibility on scroll
   const handleScroll = () => {
     if (window.scrollY > lastScrollY) {
