@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { ref, push } from "firebase/database";
 import { db } from "./firebase";
+import emailjs from "emailjs-com"; // Import EmailJS
+import Footer from "./Footer"; // Import Footer component
 
 const BookingPage = () => {
   const [formData, setFormData] = useState({
@@ -31,11 +33,30 @@ const BookingPage = () => {
     e.preventDefault();
 
     try {
-      // Create a reference to the 'bookings' node in your database
+      // 1. Add data to Firebase database
       const bookingsRef = ref(db, "bookings");
-
-      // Use the push function to add a new record with the form data
       await push(bookingsRef, formData);
+
+      // 2. Send email using EmailJS
+      const emailParams = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        clinic: formData.clinic,
+      };
+
+      // Use your service ID, template ID, and user ID from EmailJS
+      const serviceID = "service_jhsnhtm";
+      const templateID = "template_acnkitn";
+      const userID = "Tm7_IiAsDoF3iM0qf";
+
+      emailjs.send(serviceID, templateID, emailParams, userID)
+        .then((response) => {
+          console.log("Email sent successfully", response);
+        })
+        .catch((error) => {
+          console.error("Error sending email: ", error);
+        });
 
       // Show success modal
       setModalMessage("Appointment booked successfully!");
@@ -57,8 +78,11 @@ const BookingPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center pt-20"> {/* Added padding-top here */}
-      <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
+    <div 
+      className="min-h-screen bg-gray-100 flex flex-col pt-24 bg-cover bg-center"
+      style={{ backgroundImage: "url('https://i.pinimg.com/736x/58/d8/87/58d887b41dec4a14bdab336e93a4fdb0.jpg')" }} // Add your background image URL here
+    >
+      <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md mx-auto mb-8 opacity-90">
         <h1 className="text-2xl font-bold text-center mb-6 text-green-600">
           Book an Appointment
         </h1>
@@ -124,7 +148,7 @@ const BookingPage = () => {
 
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm">
             <h2 className="text-xl text-center mb-4">{modalMessage}</h2>
             <button
@@ -136,6 +160,11 @@ const BookingPage = () => {
           </div>
         </div>
       )}
+
+      {/* Footer Component */}
+      <div className="mt-auto">
+        <Footer />
+      </div>
     </div>
   );
 };

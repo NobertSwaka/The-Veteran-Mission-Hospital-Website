@@ -1,4 +1,3 @@
-// Using Font Awesome
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faTwitter, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -15,38 +14,90 @@ const Footer = () => {
           {/* Contact Information */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
-            <p className="mb-2"><strong>Address:</strong> Syokimau, Along Katani Road 800M off Mombasa Road, Machakos, Kenya.</p>
-            <p className="mb-2"><strong>Phone:</strong> +254 7101 77777</p>
-            <p className="mb-2"><strong>Email:</strong> info@veteranmissionhospitals.org</p>
+            <p className="mb-2">
+              <strong>Address:</strong> Syokimau, Along Katani Road 800M off
+              Mombasa Road, Machakos, Kenya.
+            </p>
+            <p className="mb-2">
+              <strong>Phone:</strong>{" "}
+              <a href="tel:+2547101777777" className="hover:text-red-800">
+                +254 7101 77777
+              </a>
+            </p>
+            <p className="mb-2">
+              <strong>Email:</strong>{" "}
+              <a
+                href="mailto:info@veteranmissionhospitals.org"
+                className="hover:text-red-800"
+              >
+                info@veteranmissionhospitals.org
+              </a>
+            </p>
           </div>
 
           {/* Quick Links */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
             <ul>
-              <li className="mb-2"><a href="/services" className="hover:text-red-800">Our Services</a></li>
-              <li className="mb-2"><a href="/AboutPage" className="hover:text-red-800">About Us</a></li>
-              <li className="mb-2"><a href="/Doctors" className="hover:text-red-800">Meet Our Doctors</a></li>
-              <li className="mb-2"><a href="/ContactUs" className="hover:text-red-800">Contact Us</a></li>
-              <li className="mb-2"><a href="/InsurancePage" className="hover:text-red-800">Insurance</a></li>
+              <li className="mb-2">
+                <a href="/services" className="hover:text-red-800">
+                  Our Services
+                </a>
+              </li>
+              <li className="mb-2">
+                <a href="/AboutPage" className="hover:text-red-800">
+                  About Us
+                </a>
+              </li>
+              <li className="mb-2">
+                <a href="/Doctors" className="hover:text-red-800">
+                  Meet Our Doctors
+                </a>
+              </li>
+              <li className="mb-2">
+                <a href="/ContactUs" className="hover:text-red-800">
+                  Contact Us
+                </a>
+              </li>
+              <li className="mb-2">
+                <a href="/InsurancePage" className="hover:text-red-800">
+                  Insurance
+                </a>
+              </li>
             </ul>
           </div>
 
           {/* Social Media */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Connect with Us</h3>
-            <div className="flex space-x-4">
-              <a href="https://www.facebook.com/profile.php?id=61551673282740" className="text-white hover:text-red-800" aria-label="Facebook">
-                <FontAwesomeIcon icon={faFacebookF} /> {/* or <FaFacebookF /> */}
+            <div className="flex space-x-4 text-2xl">
+              <a
+                href="https://www.facebook.com/profile.php?id=61551673282740"
+                className="text-white hover:text-red-800"
+                aria-label="Facebook"
+              >
+                <FontAwesomeIcon icon={faFacebookF} />
               </a>
-              <a href="https://twitter.com/cardioclinic" className="text-white hover:text-red-800" aria-label="Twitter">
-                <FontAwesomeIcon icon={faTwitter} /> {/* or <FaTwitter /> */}
+              <a
+                href="https://twitter.com/cardioclinic"
+                className="text-white hover:text-red-800"
+                aria-label="Twitter"
+              >
+                <FontAwesomeIcon icon={faTwitter} />
               </a>
-              <a href="https://instagram.com/cardioclinic" className="text-white hover:text-red-800" aria-label="Instagram">
-                <FontAwesomeIcon icon={faInstagram} /> {/* or <FaInstagram /> */}
+              <a
+                href="https://instagram.com/cardioclinic"
+                className="text-white hover:text-red-800"
+                aria-label="Instagram"
+              >
+                <FontAwesomeIcon icon={faInstagram} />
               </a>
-              <a href="https://linkedin.com/company/cardioclinic" className="text-white hover:text-red-800" aria-label="LinkedIn">
-                <FontAwesomeIcon icon={faLinkedin} /> {/* or <FaLinkedin /> */}
+              <a
+                href="https://linkedin.com/company/cardioclinic"
+                className="text-white hover:text-red-800"
+                aria-label="LinkedIn"
+              >
+                <FontAwesomeIcon icon={faLinkedin} />
               </a>
             </div>
           </div>
@@ -54,10 +105,17 @@ const Footer = () => {
 
         {/* Footer Bottom Section */}
         <div className="border-t border-gray-700 pt-4 text-sm text-center">
-          <p>© 2024 TVMH. All Rights Reserved. <br />Developed By: Koinonia Creatives +254 7146 70257</p>
+          <p>
+            © 2024 TVMH. All Rights Reserved. <br />
+            Developed By: Koinonia Creatives +254 7146 70257
+          </p>
           <div className="flex justify-center space-x-4 mt-2">
-            <a href="/PrivacyPolicy" className="hover:text-gray-400">Privacy Policy</a>
-            <a href="/TermsOfService" className="hover:text-gray-400">Terms of Service</a>
+            <a href="/PrivacyPolicy" className="hover:text-black">
+              Privacy Policy
+            </a>
+            <a href="/TermsOfService" className="hover:text-black">
+              Terms of Service
+            </a>
           </div>
         </div>
       </div>
