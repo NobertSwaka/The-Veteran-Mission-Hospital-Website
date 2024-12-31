@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { ref, push } from "firebase/database";
 import { db } from "./firebase";
-import emailjs from "emailjs-com"; // Import EmailJS
-import Footer from "./Footer"; // Import Footer component
+import emailjs from "emailjs-com";
+import Footer from "./Footer";
 
 const BookingPage = () => {
   const [formData, setFormData] = useState({
@@ -42,15 +42,15 @@ const BookingPage = () => {
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
-        clinic: formData.clinic,
+        clinicType: formData.clinic, // Updated key to match the template
       };
 
-      // Use your service ID, template ID, and user ID from EmailJS
       const serviceID = "service_jhsnhtm";
       const templateID = "template_acnkitn";
       const userID = "Tm7_IiAsDoF3iM0qf";
 
-      emailjs.send(serviceID, templateID, emailParams, userID)
+      emailjs
+        .send(serviceID, templateID, emailParams, userID)
         .then((response) => {
           console.log("Email sent successfully", response);
         })
@@ -78,9 +78,12 @@ const BookingPage = () => {
   };
 
   return (
-    <div 
+    <div
       className="min-h-screen bg-gray-100 flex flex-col pt-24 bg-cover bg-center"
-      style={{ backgroundImage: "url('https://i.pinimg.com/736x/58/d8/87/58d887b41dec4a14bdab336e93a4fdb0.jpg')" }} // Add your background image URL here
+      style={{
+        backgroundImage:
+          "url('https://i.pinimg.com/736x/58/d8/87/58d887b41dec4a14bdab336e93a4fdb0.jpg')",
+      }}
     >
       <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md mx-auto mb-8 opacity-90">
         <h1 className="text-2xl font-bold text-center mb-6 text-green-600">
