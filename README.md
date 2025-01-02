@@ -21,10 +21,17 @@ Welcome to the official website of **The Veteran Mission Hospitals**. This websi
 - **Home Page**: Welcoming visitors with an overview of the hospital.
 - **About Us**: Information about The Veteran Mission Hospitals' mission and vision.
 - **Services**: A detailed list of all the medical services provided by the hospital.
-- **Doctors**: A section that introduces our highly experienced medical team.
+- **Doctors**: A section introducing our highly experienced medical team.
 - **Gallery**: A visual tour of our hospital facilities.
 - **Contact**: Contact information and a way to get in touch.
 - **FAQ**: A section for frequently asked questions.
+- **CHATBOT**: A digital chatbot that chats with the user answering frequently asked questions from the user.
+- **MAP**: Provides a real-time map of the facility.
+- **BOOK APPOINTMENT**: Allows users to book appointments.
+- **Call/Whatsapp**: Every page contains a floating WhatsApp and call icon to contact us easily.
+
+
+
 
 ---
 
