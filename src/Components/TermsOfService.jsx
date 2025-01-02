@@ -1,5 +1,7 @@
 import React from "react";
 import Footer from "./pages/Footer";
+import ChatBot from "./pages/ChatBot";
+import WhatsappIcon from "./Pages/WhatsappIcon";
 const TermsOfService = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center text-gray-800 pt-24">
@@ -97,7 +99,8 @@ const TermsOfService = () => {
           </div>
         </div>
       </section>
-
+<ChatBot />
+<WhatsappIcon />
       <Footer /> {/* Footer added here */}
     </div>
   );

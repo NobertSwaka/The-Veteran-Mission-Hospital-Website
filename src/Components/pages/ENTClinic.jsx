@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "./Footer";
 import WhatsappIcon from "./WhatsappIcon";
+import ChatBot from "./ChatBot";
 
 const ENTClinic = () => {
   return (
@@ -126,6 +127,7 @@ const ENTClinic = () => {
         </div>
       </section>
 <WhatsappIcon />
+<ChatBot />
       <Footer />
     </div>
     

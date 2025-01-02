@@ -2,6 +2,7 @@
 import React from "react";
 import Footer from "./Footer";
 import WhatsappIcon from "./WhatsappIcon";
+import ChatBot from "./ChatBot";
 
 const DentalClinic = () => {
   return (
@@ -101,6 +102,7 @@ const DentalClinic = () => {
 
       
       <WhatsappIcon />
+      <ChatBot />
       <Footer />
     </div>
   );

@@ -29,6 +29,7 @@ import SpecializedClinicsTimetable from './Components/pages/SpecializedClinicsTi
 import OrthopedicClinic from './Components/pages/OrthopedicClinic';
 import TermsOfService from './Components/TermsOfService';
 import PrivacyPolicy from './Components/PrivacyPolicy';
+import ChatBot from './Components/pages/ChatBot';
 
 const App = () => {
   return (
@@ -63,6 +64,7 @@ const App = () => {
         <Route path='/OrthopedicClinic' element={<OrthopedicClinic />} />
         <Route path='/TermsOfService' element={<TermsOfService />} />
         <Route path='/PrivacyPolicy' element={<PrivacyPolicy />} />
+        <Route path='/ChatBot' element={<ChatBot />} />
 
       
         {/* Add more routes as needed */}

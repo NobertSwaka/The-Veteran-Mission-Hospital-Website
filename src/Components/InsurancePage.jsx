@@ -3,7 +3,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from "./pages/Footer";
 import InsuranceLogos from './pages/InsuranceLogos';
-
+import WhatsappIcon from './Pages/WhatsappIcon';
+import ChatBot from './pages/ChatBot';
 
 const InsurancePage = () => {
   return (
@@ -34,7 +35,8 @@ const InsurancePage = () => {
       </section>
       <br />
       <br />
-
+<ChatBot />
+<WhatsappIcon />
       <Footer />
     </div>
   );

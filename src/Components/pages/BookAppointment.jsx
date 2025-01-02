@@ -3,6 +3,8 @@ import { ref, push } from "firebase/database";
 import { db } from "./firebase";
 import emailjs from "emailjs-com";
 import Footer from "./Footer";
+import WhatsappIcon from './WhatsappIcon';
+import ChatBot from "./ChatBot";
 
 const BookingPage = () => {
   const [formData, setFormData] = useState({
@@ -166,6 +168,8 @@ const BookingPage = () => {
 
       {/* Footer Component */}
       <div className="mt-auto">
+      <WhatsappIcon />
+      <ChatBot />
         <Footer />
       </div>
     </div>

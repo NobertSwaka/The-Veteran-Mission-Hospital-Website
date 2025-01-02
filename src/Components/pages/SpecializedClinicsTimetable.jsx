@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "./Footer"; // Import Footer component
 import WhatsappIcon from "./WhatsappIcon";
+import ChatBot from "./ChatBot";
 
 const SpecializedClinicTimetable = () => {
   const timetable = [
@@ -111,6 +112,7 @@ const SpecializedClinicTimetable = () => {
         </table>
       </div>
 <WhatsappIcon />
+<ChatBot />
       {/* Footer added here */}
     </div>
     

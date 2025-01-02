@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import { ref, push } from "firebase/database";
 import { db } from "./firebase"; // Ensure this points to your Firebase configuration
 import WhatsappIcon from "./WhatsappIcon";
+import ChatBot from "./ChatBot";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -135,6 +136,7 @@ const ContactUs = () => {
         </div>
       </div>
        <WhatsappIcon />
+       <ChatBot />
       {/* Footer Section */}
       <Footer />
     </div>

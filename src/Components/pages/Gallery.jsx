@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import WhatsappIcon from "./WhatsappIcon";
 import GalPhoto1 from "./Images/hawa.jpg";
 import GalPhoto2 from "./Images/dahabo.jpg";
+import ChatBot from "./ChatBot";
 
 const Gallery = () => {
   // Sample albums
@@ -175,9 +176,10 @@ const Gallery = () => {
           </div>
         </div>
       )}
-
-      <Footer />
       <WhatsappIcon />
+      <ChatBot />
+      <Footer />
+      
     </div>
   );
 };

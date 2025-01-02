@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from './Footer';
 import WhatsappIcon from "./WhatsappIcon";
+import ChatBot from './ChatBot';
 
 // Sample data for doctors (you can replace this with dynamic data from an API)
 const doctors = [
@@ -60,6 +61,7 @@ const Doctors = () => {
         </div>
       </div>
       <WhatsappIcon />
+      <ChatBot />
       <Footer />
     </div>
   );

@@ -1,5 +1,7 @@
 // src/Components/InsuranceLogos.js
 import React from 'react';
+// import ChatBot from './ChatBot';
+// import WhatsappIcon from './WhatsappIcon';
 
 // Import all the logos
 import AAR from '../pages/Images/aar.png';;

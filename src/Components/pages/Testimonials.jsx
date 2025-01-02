@@ -3,6 +3,8 @@ import Footer from './Footer';
 import image1 from '../pages/Images/doc1.jpeg';
 import image2 from '../pages/Images/doc2.jpeg';
 import image3 from '../pages/Images/doc3.jpeg';
+import ChatBot from './ChatBot';
+import WhatsappIcon from './WhatsappIcon';
 
 const testimonials = [
   {
@@ -46,6 +48,8 @@ const Testimonials = () => {
           </div>
         ))}
       </div>
+      <ChatBot />
+      <WhatsappIcon />
       <Footer />
     </div>
   );

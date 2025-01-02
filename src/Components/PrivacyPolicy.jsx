@@ -1,5 +1,7 @@
 import React from "react";
 import Footer from "./pages/Footer";
+import ChatBot from "./pages/ChatBot";
+import WhatsappIcon from "./Pages/WhatsappIcon";
 
 const PrivacyPolicy = () => {
   return (
@@ -116,7 +118,8 @@ const PrivacyPolicy = () => {
           </div>
         </div>
       </section>
-
+<ChatBot />
+<WhatsappIcon />
       <Footer /> {/* Footer added here */}
     </div>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "./Footer";
 import WhatsappIcon from "./WhatsappIcon";
+import ChatBot from "./ChatBot";
 
 const GeneralSurgeryClinic = () => {
   return (
@@ -158,6 +159,7 @@ const GeneralSurgeryClinic = () => {
       </section>
 
       <WhatsappIcon />
+      <ChatBot />
       <Footer />
     </div>
   );

@@ -11,6 +11,9 @@ import gynaeImage from "./Images/gynae1.jpg";
 import orthoImage from "./Images/ortho1.jpeg";
 import dentalImage from "./Images/dental1.jpg";
 import WhatsappIcon from "./WhatsappIcon";
+import ChatBot from "./ChatBot";
+
+
 
 const HomePage = () => {
   const [showPopup, setShowPopup] = useState(true);
@@ -90,6 +93,7 @@ const HomePage = () => {
 
       {/* Services Section */}
       <section id="services" className="py-16 bg-gray-100">
+        
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-semibold text-center mb-12">
             Our Services
@@ -101,6 +105,7 @@ const HomePage = () => {
                 src={emergencyImage}
                 alt="Emergency Care"
                 className="w-25 h-25 mb-4 mx-auto"
+                
               />
               <h3 className="text-xl font-semibold text-center mb-2">
                 Emergency Care
@@ -224,7 +229,7 @@ const HomePage = () => {
               </p>
               <div className="flex justify-center mt-4">
                 <Link
-                  to="/dental-clinic" // Replace with the actual path
+                  to="/DentalClinic" // Replace with the actual path
                   className="inline-block bg-green-600 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded text-center"
                 >
                   Read More
@@ -239,6 +244,7 @@ const HomePage = () => {
       </section>
 
       {/* Footer Section */}
+      <ChatBot />
       <WhatsappIcon />
       <Footer />
     </div>

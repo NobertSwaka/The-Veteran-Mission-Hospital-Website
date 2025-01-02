@@ -5,6 +5,8 @@ import teamMember3 from "../pages/Images/member3.jpeg";
 import teamMember4 from "../pages/Images/CEO.jpg";
 import teamMember5 from "../pages/Images/member5.jpg";
 import Footer from "./Footer";
+import ChatBot from "./ChatBot";
+import WhatsappIcon from "./WhatsappIcon";
 
 const teamSections = [
   {
@@ -101,7 +103,8 @@ const OurTeam = () => {
           </div>
         ))}
       </div>
-
+<ChatBot />
+<WhatsappIcon />
       <Footer />
     </div>
   );

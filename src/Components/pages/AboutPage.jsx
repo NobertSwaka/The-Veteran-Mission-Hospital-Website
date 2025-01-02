@@ -2,6 +2,7 @@
 import React from 'react';
 import Footer from './Footer';
 import WhatsappIcon from './WhatsappIcon';
+import ChatBot from './ChatBot';
 
 const AboutPage = () => {
   return (
@@ -41,6 +42,7 @@ const AboutPage = () => {
         </section>
       </div>
       <WhatsappIcon />
+      <ChatBot />
       <Footer />
     </div>
     
