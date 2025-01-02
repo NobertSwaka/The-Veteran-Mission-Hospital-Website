@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-import { getDatabase, ref, push, onValue } from "firebase/database";
+import { getDatabase, ref, push, onValue, set } from "firebase/database";
 import { db } from "./firebase";
-import { FaTimes, FaComments } from "react-icons/fa";
+import { FaTimes, FaComments, FaTrash } from "react-icons/fa";
 import moment from "moment";
 
 // Import default profile images
@@ -51,7 +51,7 @@ const ChatBot = () => {
 
   const generateBotResponse = (userInput) => {
     const input = userInput.toLowerCase();
-    let botText;
+    let botText
   
     // Handling FAQ questions based on the provided questions and answers
     if (input.includes("services")) {
@@ -193,9 +193,8 @@ else if (input.includes("operating hours") || input.includes("24/7") || input.in
     };
   };
 
-
-  // Scroll to the last message after new message is added
-  useEffect(() => {
+// Scroll to the last message after new message is added
+useEffect(() => {
     if (lastMessageRef.current) {
       lastMessageRef.current.scrollIntoView({ behavior: "smooth" });
     }
@@ -219,6 +218,13 @@ else if (input.includes("operating hours") || input.includes("24/7") || input.in
     return moment(timestamp).format("h:mm A");
   };
 
+  // Clear chat messages
+  const clearChat = () => {
+    setMessages([]); // Clear the state messages
+    // Optionally, you can also clear the Firebase messages (if you want to reset the data)
+    set(messagesRef, null); // Clears all messages from Firebase
+  };
+
   return (
     <div>
       <div
@@ -230,8 +236,8 @@ else if (input.includes("operating hours") || input.includes("24/7") || input.in
 
       {isVisible && (
         <div className="fixed bottom-4 right-4 z-50 w-full max-w-xs sm:max-w-md lg:max-w-lg">
-          <div className="w-full bg-white shadow-md rounded-lg">
-            <div className="flex items-center bg-gray-600 text-white px-4 py-2">
+          <div className="relative w-full bg-white shadow-md rounded-lg">
+            <div className="flex items-center bg-gray-600 text-white px-4 py-2 relative z-10">
               <img
                 src={botProfileImage}
                 alt="Digital Assistant"
@@ -247,9 +253,13 @@ else if (input.includes("operating hours") || input.includes("24/7") || input.in
               <button onClick={toggleVisibility} className="ml-auto text-white hover:text-gray-400">
                 <FaTimes size={20} />
               </button>
+              {/* Add delete chat button */}
+              <button onClick={clearChat} className="ml-4 text-white hover:text-gray-400">
+                <FaTrash size={20} />
+              </button>
             </div>
 
-            <div className="p-4 h-96 overflow-y-auto space-y-4 bg-gray-50">
+            <div className="p-4 h-96 overflow-y-auto space-y-4 bg-gray-50 relative z-10">
               {messages.map((msg, index) => (
                 <div key={index} className={`flex ${msg.user === "User" ? "justify-end" : "justify-start"}`}>
                   <div className={`flex ${msg.user === "User" ? "flex-row-reverse" : ""} items-center`}>
@@ -273,7 +283,7 @@ else if (input.includes("operating hours") || input.includes("24/7") || input.in
               <div ref={lastMessageRef} />
             </div>
 
-            <div className="flex items-center px-4 py-2 bg-white border-t">
+            <div className="flex items-center px-4 py-2 bg-white border-t relative z-10">
               <input
                 type="text"
                 value={input}
@@ -292,5 +302,6 @@ else if (input.includes("operating hours") || input.includes("24/7") || input.in
     </div>
   );
 };
+
 
 export default ChatBot;
